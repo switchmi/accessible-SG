@@ -4,7 +4,8 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
+# Flexible authentication solution for Rails with Warden.
+gem 'devise'
 #A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 #Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
