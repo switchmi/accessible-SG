@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 #Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
 gem 'simple_form'
 
