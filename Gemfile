@@ -4,7 +4,10 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
+# Flexible authentication solution for Rails with Warden.
+gem 'devise'
+#A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 #Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
 gem 'simple_form'
 
@@ -41,6 +44,12 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_bot_rails'
+end
+
+group :test do
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
