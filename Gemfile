@@ -37,8 +37,10 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-# Slim templates generator for Rails 3, 4 and 5 
+# Slim templates generator for Rails 3, 4 and 5
 gem "slim-rails"
+# Flexible authentication solution for Rails with Warden.
+gem 'omniauth-facebook'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,6 +50,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.6'
   gem 'factory_bot_rails'
+  gem 'dotenv-rails'
 end
 
 group :test do

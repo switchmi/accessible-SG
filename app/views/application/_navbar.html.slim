@@ -10,6 +10,6 @@ nav.navbar.navbar-light
         .nav-item.ml-auto.p-2 = link_to 'Admin Sign In', new_admin_session_path
 
       - if current_user
-        .nav-item.ml-auto.p-2 = link_to 'Sign Out', destroy_user_session_path, method: :delete
+        .nav-item.ml-auto.p-2 = link_to current_user.username + ' (Sign Out)', destroy_user_session_path, method: :delete
       - else
         .nav-item.ml-auto.p-2 = link_to 'User Sign In', new_user_session_path
