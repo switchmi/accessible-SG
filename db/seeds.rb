@@ -5,10 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-<<<<<<< HEAD
-Admin.create(email: 'admin@gmail.com', password: '111111', password_confirmation: '111111', username: 'admin')
-User.create(email: 'user@gmail.com', password: '111111', password_confirmation: '111111', username: 'user1')
-=======
 
 if Admin.count == 0
   Admin.create(email: 'admin@gmail.com', password: '111111', password_confirmation: '111111')
@@ -23,4 +19,3 @@ unless Review.count > 10
     Review.create(title: Faker::HeyArnold.character, description: Faker::Hipster.paragraph(2, false, 4))
   end
 end
->>>>>>> add review model,controller,views and fix seed
