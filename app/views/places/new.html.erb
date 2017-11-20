@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Create a new place</h1>
+
+  <%= simple_form_for @place do |f| %>
+    <%= f.input :name, error: 'Username is mandatory, please specify one' %>
+    <%= f.input :website %>
+    <%= f.input :address, error: 'Address is mandatory, please specify one' %>
+    <%= f.input :contact_number %>
+    <%= f.input :email %>
+    <%= f.button :submit %>
+    <% end %>
+  <br>
+  <br>  
+</div>

@@ -10,7 +10,6 @@ gem 'devise'
 gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 #Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
 gem 'simple_form'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
