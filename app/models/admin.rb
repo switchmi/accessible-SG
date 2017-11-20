@@ -4,7 +4,8 @@ class Admin < ApplicationRecord
   devise :database_authenticatable,
   :trackable, :timeoutable, :lockable
   attr_accessor :login
-
+  validates :email, presence: true
+  validates :email, uniqueness: { case_sensitive: false }
   validates :username, presence: true, length: {maximum: 255}, uniqueness: { case_sensitive: false }, format: { with: /\A[a-zA-Z0-9]*\z/, message: "may only contain letters and numbers." }
 
   def self.find_first_by_auth_conditions(warden_conditions)
