@@ -5,6 +5,6 @@ FactoryBot.define do
     website 'www.website.com'
     address '13 Sterling Road'
     contact_number '12345678'
-    email { |n| "adam#{n}@example.com" }
+    sequence(:email) { |n| "email#{n}@example.com" }
   end
 end

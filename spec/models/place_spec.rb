@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Place, type: :model do
 
-  before do
-    sign_in :user, create(:user)
-  end
+  let(:user) {create(:user)}
 
-  let(:subject) { create(:place) }
+  before do
+    sign_in :user
+  end
 
   it { is_expected.to validate_presence_of(:name) }
   it { is_expected.to validate_presence_of(:address) }
