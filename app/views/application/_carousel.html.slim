@@ -1,0 +1,23 @@
+#carouselExampleIndicators.carousel.slide[data-ride="carousel"]
+  ol.carousel-indicators
+    li.active[data-target="#carouselExampleIndicators" data-slide-to="0"]
+    li[data-target="#carouselExampleIndicators" data-slide-to="1"]
+    li[data-target="#carouselExampleIndicators" data-slide-to="2"]
+  .carousel-inner
+    .carousel-item.active
+      = image_tag "merlion_park.png", class: "d-block w-100", alt: "first"
+      .carousel-caption.d-none.d-md-block
+        h1 Accessible SG
+        h3 Explore our site for accessibility ratings and reviews of attractions in Singapore
+    .carousel-item
+      = image_tag "neighborhood.png", class: "d-block w-100", alt: "second"
+    .carousel-item
+      = image_tag "Map_SG.png", class: "d-block w-100", alt: "third"
+  a.carousel-control-prev[href="#carouselExampleIndicators" role="button" data-slide="prev"]
+    span.carousel-control-prev-icon[aria-hidden="true"]
+    span.sr-only
+      | Previous
+  a.carousel-control-next[href="#carouselExampleIndicators" role="button" data-slide="next"]
+    span.carousel-control-next-icon[aria-hidden="true"]
+    span.sr-only
+      | Next

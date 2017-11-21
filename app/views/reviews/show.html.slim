@@ -1,0 +1,16 @@
+h1 Show Review
+.container-fluid
+  .row
+    table.table
+      thead
+        tr
+          th Title
+          th Description
+      tbody
+        td = @review.title
+        td = @review.description
+        td = link_to 'Edit', edit_review_path(@review)
+        td = link_to 'Destroy', review_path(@review), method: :delete, data: { confirm: "Sure?" }
+
+  .row
+    button = link_to "Home", root_path

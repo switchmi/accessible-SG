@@ -1,2 +1,54 @@
+.flex
+  = render partial: "application/carousel"
+  br
 .container-fluid
-  h1 Hello!
+  .row
+    .col-sm-6
+      .row.justify-content-center
+        .card.text-center.bg-dark.text-white.w-75
+          .card-img
+            = image_tag "about_sg.png", alt: "cat-image", class: "w-100"
+          .card-img-overlay
+            h1.card-title About Singapore
+      br
+      .row.justify-content-center
+        .card.text-center.bg-dark.text-white.w-75
+          .card-img
+            = image_tag "getting_around.png", alt: "cat-image", class: "w-100"
+          .card-img-overlay
+            h1.card-title Getting Around
+      br
+      .row.justify-content-center
+        .card.text-center.bg-dark.text-white.w-75
+          .card-img
+            = image_tag "helix_bridge.png", alt: "cat-image", class: "w-100"
+          .card-img-overlay
+            h1.card-title See & Do
+      br
+      .row.justify-content-center
+        .card.text-center.w-75
+          h5 For More Details
+          p Go to visitsingapore.com
+    .col-sm-6
+      .row
+        .card.w-75 [style="height: 40rem;"]
+          br
+          h1 Accessible Attractions
+          br
+          h3 National Museum
+          br
+          h3 Singapore Flyer
+          br
+          h3 Universal Studios
+          br
+          h3 Night Safari
+          br
+          h3 Esplanade Theatre
+          br
+          h3 Orchard Road
+      br
+      .row
+        = render partial: "application/review"
+  br
+  .row
+    = render partial: "application/footer"

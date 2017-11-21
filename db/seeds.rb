@@ -5,5 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Admin.create(email: 'admin@gmail.com', password: '111111', password_confirmation: '111111', username: 'admin')
-User.create(email: 'user@gmail.com', password: '111111', password_confirmation: '111111', username: 'user1')
+
+if Admin.count == 0
+  Admin.create(email: 'admin@gmail.com', password: '111111', password_confirmation: '111111')
+end
+
+if User.count == 0
+  User.create(email: 'user@gmail.com', password: '111111', password_confirmation: '111111', username: 'user1')
+end
+
+unless Review.count > 10
+  10.times do
+    Review.create(title: Faker::HeyArnold.character, description: Faker::Hipster.paragraph(2, false, 4))
+  end
+end
