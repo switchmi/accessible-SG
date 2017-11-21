@@ -7,6 +7,8 @@ RSpec.describe Place, type: :model do
   before do
     sign_in :user
   end
+  
+  let(:subject) { create(:place) }
 
   it { is_expected.to validate_presence_of(:name) }
   it { is_expected.to validate_presence_of(:address) }
