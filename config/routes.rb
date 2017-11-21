@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
+<<<<<<< HEAD
+=======
+  resources :reviews
+
+>>>>>>> add review model,controller,views and fix seed
   namespace :admin do
     root to: 'pages#home'
   end
